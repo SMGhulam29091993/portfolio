@@ -22,10 +22,26 @@ const Navbar = () => {
   }, []);
 
   const scrollTo = (id: string) => {
-    document
-      .getElementById(id.toLowerCase())
-      ?.scrollIntoView({ behavior: "smooth" });
-    setMobileOpen(false);
+    const target = document.getElementById(id.toLowerCase());
+    if (!target) return;
+
+    const scrollWithOffset = () => {
+      const navOffset = 88;
+      const targetTop = target.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: Math.max(0, targetTop - navOffset),
+        behavior: "smooth",
+      });
+    };
+
+    // Close the mobile menu first, then scroll after layout settles.
+    if (mobileOpen) {
+      setMobileOpen(false);
+      window.setTimeout(scrollWithOffset, 220);
+      return;
+    }
+
+    scrollWithOffset();
   };
 
   return (
