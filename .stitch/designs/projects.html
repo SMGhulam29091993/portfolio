@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Featured Projects | ARCHITECT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Space+Grotesk:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#00424e",
+              "error-container": "#93000a",
+              "tertiary-container": "#bd871a",
+              "on-primary-fixed": "#2c0051",
+              "surface-tint": "#ddb7ff",
+              "error": "#ffb4ab",
+              "background": "#131313",
+              "primary-fixed-dim": "#ddb7ff",
+              "on-surface": "#e5e2e1",
+              "on-secondary": "#003640",
+              "inverse-on-surface": "#313030",
+              "primary": "#ddb7ff",
+              "surface-dim": "#131313",
+              "on-background": "#e5e2e1",
+              "surface-container-high": "#2a2a2a",
+              "surface-container-low": "#1c1b1b",
+              "outline": "#988d9f",
+              "on-surface-variant": "#cfc2d6",
+              "inverse-primary": "#842bd2",
+              "tertiary": "#fabc4e",
+              "on-primary-fixed-variant": "#6900b3",
+              "surface-container-highest": "#353534",
+              "primary-fixed": "#f0dbff",
+              "on-tertiary-fixed": "#281900",
+              "primary-container": "#b76dff",
+              "secondary-container": "#03b5d3",
+              "secondary": "#4cd7f6",
+              "inverse-surface": "#e5e2e1",
+              "surface-bright": "#3a3939",
+              "surface": "#131313",
+              "on-primary-container": "#400071",
+              "on-error": "#690005",
+              "on-tertiary-container": "#3a2600",
+              "surface-variant": "#353534",
+              "on-secondary-fixed": "#001f26",
+              "on-tertiary": "#432c00",
+              "tertiary-fixed": "#ffdead",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-container": "#201f1f",
+              "secondary-fixed-dim": "#4cd7f6",
+              "on-error-container": "#ffdad6",
+              "on-primary": "#490080",
+              "outline-variant": "#4d4354",
+              "tertiary-fixed-dim": "#fabc4e",
+              "on-tertiary-fixed-variant": "#604100",
+              "secondary-fixed": "#acedff",
+              "on-secondary-fixed-variant": "#004e5c"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-purple-500\/30:hover {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+        }
+        .neon-border-hover:hover {
+            border-color: #b76dff;
+            box-shadow: 0 0 15px rgba(183, 109, 255, 0.4);
+        }
+        .glass-card {
+            background: rgba(53, 53, 52, 0.4);
+            backdrop-filter: blur(20px);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(221, 183, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30 selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/40 backdrop-blur-xl bg-gradient-to-b from-[#131313] to-transparent shadow-[0px_20px_50px_rgba(168,85,247,0.15)]">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black text-purple-500 tracking-[-0.04em] uppercase font-headline">
+                ARCHITECT
+            </div>
+<div class="hidden md:flex items-center gap-12 font-headline font-bold tracking-tighter">
+<a class="text-purple-400 border-b-2 border-purple-500 pb-1 hover:scale-105 active:scale-95 transition-all" href="#">Work</a>
+<a class="text-stone-400 hover:text-stone-100 transition-colors hover:scale-105 active:scale-95 transition-transform" href="#">About</a>
+<a class="text-stone-400 hover:text-stone-100 transition-colors hover:scale-105 active:scale-95 transition-transform" href="#">Skills</a>
+<a class="text-stone-400 hover:text-stone-100 transition-colors hover:scale-105 active:scale-95 transition-transform" href="#">Contact</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-container font-headline font-bold px-6 py-2 rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(183,109,255,0.3)]">
+                Hire Me
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-screen-2xl mx-auto">
+<!-- Hero Section -->
+<header class="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-3xl">
+<span class="font-label text-primary uppercase tracking-[0.2em] text-[0.75rem] mb-4 block">Selected Works</span>
+<h1 class="text-[3.5rem] md:text-[5rem] font-black font-headline tracking-tighter leading-[0.9] uppercase italic">
+                    Featured <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary-container">Projects</span>
+</h1>
+</div>
+<div class="max-w-sm text-on-surface-variant">
+<p class="text-lg leading-relaxed">
+                    A curated collection of digital experiences focusing on high-performance rendering and editorial interfaces.
+                </p>
+</div>
+</header>
+<!-- Project Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-x-16 md:gap-y-24">
+<!-- Project Card 1 -->
+<div class="group relative flex flex-col gap-6">
+<div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-surface-container-low border border-outline-variant/15 transition-all duration-500 neon-border-hover group-hover:scale-[1.02]">
+<img alt="Aether Engine project preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" data-alt="Abstract 3D digital landscape with neon purple and blue wireframe structures glowing in a deep black void" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lMUloiZUTv0xC7N-vxygzwwDCPZ4-L-KajT6vwcIeIqDrTMytiy0tW9-Doe5HuBpb99-Iv1dDBoUTW35agBg8Dj15t3SrLWQ3tXnxSLaOGwWkN6kYGqWa_Xzh7d8IG-2ZwfH_MogMEZNP2JVTTTBCR9CidoZg4w0V39AaSQUMOriQ-koTXHlYQIYzAS_LcWwKrBWqs67laWNoZz8kvADDsRi4Ph-BJH6nOcGi9FQYITEzMjY-PD70ZjLAO4StzuJbigy_Zm1FbJj"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="font-label text-[0.65rem] uppercase tracking-widest px-3 py-1 bg-on-secondary-fixed-variant text-secondary-fixed rounded-full border border-secondary/20">Rust</span>
+<span class="font-label text-[0.65rem] uppercase tracking-widest px-3 py-1 bg-on-secondary-fixed-variant text-secondary-fixed rounded-full border border-secondary/20">WGPU</span>
+<span class="font-label text-[0.65rem] uppercase tracking-widest px-3 py-1 bg-on-secondary-fixed-variant text-secondary-fixed rounded-full border border-secondary/20">Vulkan</span>
+</div>
+<div>
+<h3 class="text-3xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors italic">Aether Engine</h3>
+<p class="text-on-surface-variant mt-2 max-w-md">A next-gen rendering system built with Rust, pushing the boundaries of real-time global illumination and spatial audio mapping.</p>
+</div>
+<a class="inline-flex items-center self-start px-6 py-2 border border-primary/30 text-primary font-label uppercase tracking-widest text-xs rounded-full hover:bg-primary/10 hover:border-primary transition-all hover:shadow-[0_0_15px_rgba(221,183,255,0.4)]" href="#">
+                        View Project
+                    </a>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group relative flex flex-col gap-6 md:mt-24">
+<div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-surface-container-low border border-outline-variant/15 transition-all duration-500 neon-border-hover group-hover:scale-[1.02]">
+<img alt="Lumina Dashboard preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" data-alt="Futuristic data analytics dashboard interface with glowing neon purple charts and data points on a dark glass background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ-CnHa7EOaJdqirAoc88IxWtTF92PaWwGsE9H3oxCwQDUT6JDvJ5vYjUW7q92zDBch_BP3D4ukfMSpQiSW0Oypf8LAADqpB541GQgBH8WtPqgMBWZ-HV-czLPTEz2MJ9ZZDVQtz0IfeSV-59sA5FD19EpMlgeOyjYboS2p8oysUJuMhscbjohVRfCfhjzBYjT2krlJmonPcp4jlmrNQEabr3B9-CTrbdYTOSQwmOdB_QTIc32HB3D5-AgykVxP9vqeFgHzQdjMNdP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="font-label text-[0.65rem] uppercase tracking-widest px-3 py-1 bg-on-secondary-fixed-variant text-secondary-fixed rounded-full border border-secondary/20">React</span>
+<span class="font-label text-[0.65rem] uppercase tracking-widest px-3 py-1 bg-on-secondary-fixed-variant text-secondary-fixed rounded-full border border-secondary/20">D3.js</span>
+<span class="font-label text-[0.65rem] uppercase tracking-widest px-3 py-1 bg-on-secondary-fixed-variant text-secondary-fixed rounded-full border border-secondary/20">Node.js</span>
+</div>
+<div>
+<h3 class="text-3xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors italic">Lumina Dashboard</h3>
+<p class="text-on-surface-variant mt-2 max-w-md">Real-time analytics for decentralized finance protocols. Featuring complex data visualization with zero-latency updates.</p>
+</div>
+<a class="inline-flex items-center self-start px-6 py-2 border border-primary/30 text-primary font-label uppercase tracking-widest text-xs rounded-full hover:bg-primary/10 hover:border-primary transition-all hover:shadow-[0_0_15px_rgba(221,183,255,0.4)]" href="#">
+                        View Project
+                    </a>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="group relative flex flex-col gap-6">
+<div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-surface-container-low border border-outline-variant/15 transition-all duration-500 neon-border-hover group-hover:scale-[1.02]">
+<img alt="Cyber Grid project preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" data-alt="Highly detailed cybernetic grid pattern with glowing nodes and purple electrical arcs pulsing against a matte black surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC27XztzB2_CLkqNCe6bS_gcFPGgx7gerKJojn21_LkJchrjauCTnuJAsvH1cg7ym4hlYYndculynzS-IaSvzEw3PTRj_mejy4TSx7RPahDC0vq6PiPDJ1XntHaoHNHtxHxVerwbwuDNbCCvGUgAuCBuW1h4htNOW2lUP-B-15IqjP8cijo44X4o24d_7Y1EthhtUvapaN3OfPbNMChBwyDL11lTIUOENEiRZlz-epFYTDTyd2piJ_m9w4qi4oj-8sNOVkvhL9VzBEh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="font-label text-[0.65rem] uppercase tracking-widest px-3 py-1 bg-on-secondary-fixed-variant text-secondary-fixed rounded-full border border-secondary/20">Three.js</span>
+<span class="font-label text-[0.65rem] uppercase tracking-widest px-3 py-1 bg-on-secondary-fixed-variant text-secondary-fixed rounded-full border border-secondary/20">GLSL</span>
+</div>
+<div>
+<h3 class="text-3xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors italic">Cyber Grid</h3>
+<p class="text-on-surface-variant mt-2 max-w-md">Experimental web-based spatial environment exploring procedural generation and interactive geometry shaders.</p>
+</div>
+<a class="inline-flex items-center self-start px-6 py-2 border border-primary/30 text-primary font-label uppercase tracking-widest text-xs rounded-full hover:bg-primary/10 hover:border-primary transition-all hover:shadow-[0_0_15px_rgba(221,183,255,0.4)]" href="#">
+                        View Project
+                    </a>
+</div>
+</div>
+<!-- Project Card 4 -->
+<div class="group relative flex flex-col gap-6 md:mt-24">
+<div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-surface-container-low border border-outline-variant/15 transition-all duration-500 neon-border-hover group-hover:scale-[1.02]">
+<img alt="Vertex Protocol project preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100" data-alt="Minimalist abstract graphic showing a single white sphere being dissolved into neon purple pixels against a solid black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgwyeV15VeYyhCGtuUrYUxyXcekcfwLBRN3r5Ae7RJlhevqyCoa-N4ngj3FR_HordSY7QDYx6F6Ngm0tMJ2xHg7wNJo87g5krBJQjmmzdq7ZqqCGSI0bR75cP0x9fFJhF_M9JhzTj4mUdJtis8tc3dbYO91a0WHduO4lKzvW0w8CkLmNbGUEdx95GMI31UnWemoBZCQ74W26deJYpL9-2JtKfb0pS2Wr2Lx-4vA6nRAKsdXaTUpXBqUJ5-WMD9XyWl51jDII6IyoB9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-wrap gap-2">
+<span class="font-label text-[0.65rem] uppercase tracking-widest px-3 py-1 bg-on-secondary-fixed-variant text-secondary-fixed rounded-full border border-secondary/20">Solidity</span>
+<span class="font-label text-[0.65rem] uppercase tracking-widest px-3 py-1 bg-on-secondary-fixed-variant text-secondary-fixed rounded-full border border-secondary/20">Next.js</span>
+</div>
+<div>
+<h3 class="text-3xl font-bold font-headline tracking-tight text-white group-hover:text-primary transition-colors italic">Vertex Protocol</h3>
+<p class="text-on-surface-variant mt-2 max-w-md">A security-first architecture for cross-chain identity verification, utilizing zero-knowledge proofs for privacy.</p>
+</div>
+<a class="inline-flex items-center self-start px-6 py-2 border border-primary/30 text-primary font-label uppercase tracking-widest text-xs rounded-full hover:bg-primary/10 hover:border-primary transition-all hover:shadow-[0_0_15px_rgba(221,183,255,0.4)]" href="#">
+                        View Project
+                    </a>
+</div>
+</div>
+</div>
+<!-- Contact CTA Section -->
+<section class="mt-48 mb-24 relative overflow-hidden rounded-3xl p-12 md:p-24 bg-surface-container border border-outline-variant/10">
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] -mr-64 -mt-64"></div>
+<div class="relative z-10 flex flex-col items-center text-center gap-8">
+<h2 class="text-4xl md:text-6xl font-black font-headline tracking-tighter uppercase italic">Ready to build the <span class="text-primary text-glow">future</span>?</h2>
+<p class="text-on-surface-variant max-w-xl text-lg leading-relaxed">
+                    Currently accepting new collaborations and architectural inquiries for 2024. Let's create something ethereal together.
+                </p>
+<div class="flex flex-wrap justify-center gap-6 mt-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-container font-headline font-bold px-10 py-4 rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(183,109,255,0.4)] text-lg">
+                        Get In Touch
+                    </button>
+<button class="px-10 py-4 border border-outline-variant/30 text-stone-300 font-headline font-bold rounded-full hover:bg-white/5 hover:text-white transition-all text-lg">
+                        View Services
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#1c1b1b] w-full py-12 px-8 border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-screen-2xl mx-auto">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="text-lg font-bold text-stone-100 font-headline">ARCHITECT</span>
+<p class="font-label text-[0.75rem] uppercase tracking-[0.1em] text-stone-500">© 2024 THE ETHEREAL ARCHITECT. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-label text-[0.75rem] uppercase tracking-[0.1em] text-stone-500 hover:text-purple-400 transition-colors opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="font-label text-[0.75rem] uppercase tracking-[0.1em] text-stone-500 hover:text-purple-400 transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="font-label text-[0.75rem] uppercase tracking-[0.1em] text-stone-500 hover:text-purple-400 transition-colors opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="font-label text-[0.75rem] uppercase tracking-[0.1em] text-stone-500 hover:text-purple-400 transition-colors opacity-80 hover:opacity-100" href="#">Dribbble</a>
+</div>
+</div>
+</footer>
+</body></html>

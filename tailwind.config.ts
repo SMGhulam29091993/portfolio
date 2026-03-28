@@ -15,8 +15,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Space Grotesk", "sans-serif"],
+        headline: ["Inter", "sans-serif"],
         body: ["Inter", "sans-serif"],
+        label: ["Space Grotesk", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -27,11 +28,17 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          container: "#b76dff",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        "on-surface": "hsl(var(--foreground))",
+        "on-surface-variant": "hsl(var(--muted-foreground))",
+        "surface-container": "hsl(var(--card))",
+        "surface-container-low": "hsl(var(--popover))",
+        "surface-container-highest": "hsl(var(--muted))",
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",

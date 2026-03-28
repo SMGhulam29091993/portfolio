@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Ethereal Architect | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;family=Space+Grotesk:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#004e5c",
+              "secondary-fixed": "#acedff",
+              "tertiary-fixed-dim": "#fabc4e",
+              "on-tertiary-fixed-variant": "#604100",
+              "on-primary": "#490080",
+              "outline-variant": "#4d4354",
+              "secondary-fixed-dim": "#4cd7f6",
+              "on-error-container": "#ffdad6",
+              "surface-container": "#201f1f",
+              "surface-container-lowest": "#0e0e0e",
+              "tertiary-fixed": "#ffdead",
+              "on-tertiary": "#432c00",
+              "on-secondary-fixed": "#001f26",
+              "on-tertiary-container": "#3a2600",
+              "surface-variant": "#353534",
+              "on-error": "#690005",
+              "surface": "#131313",
+              "on-primary-container": "#400071",
+              "inverse-surface": "#e5e2e1",
+              "surface-bright": "#3a3939",
+              "secondary": "#4cd7f6",
+              "secondary-container": "#03b5d3",
+              "on-tertiary-fixed": "#281900",
+              "primary-container": "#b76dff",
+              "tertiary": "#fabc4e",
+              "on-primary-fixed-variant": "#6900b3",
+              "surface-container-highest": "#353534",
+              "primary-fixed": "#f0dbff",
+              "inverse-primary": "#842bd2",
+              "outline": "#988d9f",
+              "on-surface-variant": "#cfc2d6",
+              "surface-container-low": "#1c1b1b",
+              "surface-container-high": "#2a2a2a",
+              "primary": "#ddb7ff",
+              "surface-dim": "#131313",
+              "on-background": "#e5e2e1",
+              "inverse-on-surface": "#313030",
+              "surface-tint": "#ddb7ff",
+              "error": "#ffb4ab",
+              "background": "#131313",
+              "on-secondary": "#003640",
+              "on-surface": "#e5e2e1",
+              "primary-fixed-dim": "#ddb7ff",
+              "on-primary-fixed": "#2c0051",
+              "tertiary-container": "#bd871a",
+              "error-container": "#93000a",
+              "on-secondary-container": "#00424e"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(19, 19, 19, 0.4);
+            backdrop-filter: blur(20px);
+        }
+        .neon-glow-primary {
+            box-shadow: 0px 0px 20px rgba(168, 85, 247, 0.3);
+        }
+        .neon-glow-secondary {
+            box-shadow: 0px 0px 20px rgba(76, 215, 246, 0.3);
+        }
+        .perspective-container {
+            perspective: 1000px;
+        }
+        .floating-element {
+            transform: rotateX(2deg) rotateY(-2deg);
+        }
+        .text-massive {
+            font-size: clamp(3rem, 10vw, 8rem);
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+        }
+        .bg-void {
+            background-color: #050505;
+        }
+    </style>
+</head>
+<body class="bg-void text-on-surface font-body selection:bg-primary/30 selection:text-primary">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-[0px_20px_50px_rgba(168,85,247,0.15)]">
+<div class="flex justify-between items-center px-10 py-6 max-w-[1440px] mx-auto">
+<div class="text-xl font-black tracking-tighter text-[#e5e2e1]">
+                PORTFOLIO
+            </div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-[#ddb7ff] font-bold border-b-2 border-[#ddb7ff] pb-1 font-label text-sm uppercase tracking-widest" href="#">Home</a>
+<a class="text-[#e5e2e1]/70 font-medium hover:text-[#ddb7ff] transition-all duration-300 font-label text-sm uppercase tracking-widest" href="#">Work</a>
+<a class="text-[#e5e2e1]/70 font-medium hover:text-[#ddb7ff] transition-all duration-300 font-label text-sm uppercase tracking-widest" href="#">About</a>
+<a class="text-[#e5e2e1]/70 font-medium hover:text-[#ddb7ff] transition-all duration-300 font-label text-sm uppercase tracking-widest" href="#">Contact</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-container font-bold px-8 py-3 rounded-full neon-glow-primary active:scale-95 transition-all duration-300 font-label text-xs uppercase tracking-widest">
+                Get in Touch
+            </button>
+</div>
+</nav>
+<main class="relative min-h-screen overflow-hidden flex flex-col justify-center pt-24 px-10 max-w-[1440px] mx-auto">
+<!-- Background Ambient Glows -->
+<div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[150px] pointer-events-none"></div>
+<!-- Floating 3D Elements (Visual Decorations) -->
+<div class="absolute top-40 right-[15%] perspective-container hidden lg:block">
+<div class="w-32 h-32 bg-surface-container-highest/40 backdrop-blur-md border border-outline-variant/15 floating-element rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">deployed_code</span>
+</div>
+</div>
+<div class="absolute bottom-40 left-[10%] perspective-container hidden lg:block">
+<div class="w-24 h-24 bg-surface-container/30 backdrop-blur-sm border border-outline-variant/10 floating-element -rotate-12 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-4xl">category</span>
+</div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-9">
+<div class="mb-6">
+<span class="font-label text-secondary text-xs font-bold tracking-[0.3em] uppercase bg-on-secondary-container/20 px-4 py-1.5 rounded-full border border-secondary/20">
+                        Available for Projects
+                    </span>
+</div>
+<h1 class="font-headline font-black text-on-surface text-massive">
+                    Frontend<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary-container">Developer</span><br/>
+                    &amp; Designer
+                </h1>
+</div>
+<div class="lg:col-span-3 lg:mt-24 space-y-8">
+<div class="p-[1px] bg-gradient-to-b from-outline-variant/30 to-transparent rounded-xl">
+<div class="bg-surface-container-low/80 backdrop-blur-md p-8 rounded-xl border border-white/5">
+<p class="text-on-surface-variant body-lg leading-relaxed">
+                            Architecting high-fidelity digital experiences where precision engineering meets ethereal aesthetics.
+                        </p>
+</div>
+</div>
+<div class="flex flex-wrap gap-4 items-center">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-surface overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a professional man with modern glasses and sharp features in dramatic studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxNPInfcjmk_Kn6zme5e9m8kuJPJvY8fpFtUATxe58wPUqZJ1RsoBBpkBXzqKciqk8vuVfGNRbTan3L2FjTucpde9jvYSfWwWB9Hhdyuwd8Xwsok75IpAWkhJtTzefcSbOxxs_j6G1DkePRsLOX0lP-TR4BsPf6-KEoYJGAWXfH6shjBT6tqOiMPibXWGvZBi-sAg8N9hjSBFOiSie42wWBEn-rKqtlYmnOnylLEKLSykgsN5Yu_2MKnFcQswnTC0iYxr3WbwGSK44"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface overflow-hidden bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-on-surface-variant">add</span>
+</div>
+</div>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant/60">Trusted by 20+ Global Studios</span>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
+<span class="font-label text-[10px] uppercase tracking-[0.5em] text-on-surface/30">Scroll</span>
+<div class="w-[1px] h-16 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</main>
+<!-- Secondary Context Section (Tonal Transition) -->
+<section class="bg-surface-container-lowest py-32 px-10">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="space-y-4">
+<div class="text-secondary flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">blur_on</span>
+<span class="font-label uppercase tracking-widest text-xs font-bold">Concept</span>
+</div>
+<h3 class="font-headline text-2xl font-bold">Ethereal Minimalism</h3>
+<p class="text-on-surface-variant leading-relaxed">Breaking the traditional grid with intentional asymmetry and vast negative space.</p>
+</div>
+<div class="space-y-4">
+<div class="text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">token</span>
+<span class="font-label uppercase tracking-widest text-xs font-bold">Execution</span>
+</div>
+<h3 class="font-headline text-2xl font-bold">Cyber Performance</h3>
+<p class="text-on-surface-variant leading-relaxed">Lightning-fast architectures paired with fluid, high-end motion design systems.</p>
+</div>
+<div class="space-y-4">
+<div class="text-tertiary flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">layers</span>
+<span class="font-label uppercase tracking-widest text-xs font-bold">Identity</span>
+</div>
+<h3 class="font-headline text-2xl font-bold">The Void Canvas</h3>
+<p class="text-on-surface-variant leading-relaxed">A deep-space foundation where every pixel of light is earned and intentional.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full relative py-12 bg-[#131313]">
+<div class="flex flex-col md:flex-row justify-between items-center px-10 max-w-[1440px] mx-auto gap-8">
+<div class="text-lg font-bold text-[#e5e2e1]">
+                THE ETHEREAL ARCHITECT
+            </div>
+<div class="flex gap-8">
+<a class="text-[#e5e2e1]/50 hover:text-[#ddb7ff] transition-colors font-label text-[10px] uppercase tracking-widest" href="#">Privacy</a>
+<a class="text-[#e5e2e1]/50 hover:text-[#ddb7ff] transition-colors font-label text-[10px] uppercase tracking-widest" href="#">Terms</a>
+</div>
+<div class="font-label text-[10px] uppercase tracking-widest text-[#e5e2e1]/30">
+                © 2024 THE ETHEREAL ARCHITECT
+            </div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Space_Grotesk:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#1c1b1b",
+              "on-secondary": "#003640",
+              "secondary-fixed": "#acedff",
+              "on-primary": "#490080",
+              "error-container": "#93000a",
+              "tertiary-fixed-dim": "#fabc4e",
+              "surface-container-lowest": "#0e0e0e",
+              "on-primary-container": "#400071",
+              "on-surface": "#e5e2e1",
+              "surface-dim": "#131313",
+              "on-tertiary-fixed": "#281900",
+              "on-background": "#e5e2e1",
+              "secondary-container": "#03b5d3",
+              "surface-container-high": "#2a2a2a",
+              "inverse-on-surface": "#313030",
+              "surface-bright": "#3a3939",
+              "on-primary-fixed": "#2c0051",
+              "outline-variant": "#4d4354",
+              "on-secondary-container": "#00424e",
+              "surface-tint": "#ddb7ff",
+              "surface-container": "#201f1f",
+              "on-surface-variant": "#cfc2d6",
+              "background": "#131313",
+              "surface": "#131313",
+              "secondary-fixed-dim": "#4cd7f6",
+              "primary-container": "#b76dff",
+              "tertiary-fixed": "#ffdead",
+              "primary": "#ddb7ff",
+              "surface-variant": "#353534",
+              "on-error-container": "#ffdad6",
+              "surface-container-highest": "#353534",
+              "on-tertiary-fixed-variant": "#604100",
+              "primary-fixed-dim": "#ddb7ff",
+              "inverse-surface": "#e5e2e1",
+              "tertiary-container": "#bd871a",
+              "tertiary": "#fabc4e",
+              "on-error": "#690005",
+              "outline": "#988d9f",
+              "on-secondary-fixed": "#001f26",
+              "on-tertiary": "#432c00",
+              "inverse-primary": "#842bd2",
+              "error": "#ffb4ab",
+              "on-secondary-fixed-variant": "#004e5c",
+              "on-tertiary-container": "#3a2600",
+              "secondary": "#4cd7f6",
+              "on-primary-fixed-variant": "#6900b3",
+              "primary-fixed": "#f0dbff"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-glow-purple {
+            box-shadow: 0px 20px 50px rgba(168, 85, 247, 0.15);
+        }
+        .asymmetric-clip {
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/40 backdrop-blur-xl border-b border-[#4d4354]/15 shadow-[0px_20px_50px_rgba(168,85,247,0.15)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-6">
+<div class="text-2xl font-black tracking-tighter text-[#e5e2e1]">ARCHITECT.V01</div>
+<div class="hidden md:flex items-center space-x-8 font-['Inter'] font-bold tracking-tighter">
+<a class="text-[#e5e2e1]/60 hover:text-[#e5e2e1] transition-colors" href="#">Work</a>
+<a class="text-[#ddb7ff] border-b-2 border-[#ddb7ff] pb-1" href="#">About</a>
+<a class="text-[#e5e2e1]/60 hover:text-[#e5e2e1] transition-colors" href="#">Skills</a>
+<a class="text-[#e5e2e1]/60 hover:text-[#e5e2e1] transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold text-sm tracking-tight hover:scale-95 duration-200 neon-glow-purple transition-all">
+                Hire Me
+            </button>
+</div>
+</nav>
+<main class="min-h-screen pt-32 pb-24 overflow-hidden">
+<!-- Section Header: Massive Display Typography -->
+<div class="max-w-7xl mx-auto px-8 mb-32 relative">
+<div class="absolute -left-10 -top-20 text-[12rem] font-black text-white/[0.02] select-none pointer-events-none tracking-tighter">
+                PROFILE
+            </div>
+<h1 class="text-7xl md:text-[8rem] font-black tracking-tighter leading-[0.8] text-on-surface relative z-10">
+                THE<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary-container">ARCHITECT</span>
+</h1>
+</div>
+<!-- Asymmetric About Content -->
+<section class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<!-- Left: Personal Photo Section (Asymmetric) -->
+<div class="md:col-span-5 relative group">
+<div class="absolute -inset-4 bg-primary/20 blur-3xl rounded-full opacity-30 group-hover:opacity-50 transition-opacity"></div>
+<div class="relative aspect-[3/4] bg-surface-container-highest rounded-lg overflow-hidden transform perspective-[1000px] rotate-y-[-5deg] rotate-x-[2deg] border border-outline-variant/15">
+<img alt="Profile" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="Cinematic portrait of a male designer in high-tech studio environment, moody blue and purple neon lighting, sharp focus, futuristic aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCobYZNKxVMkYJtRnTGM-knvQdUpDyK7pFz4cyLvJCR3yZM4IaoCskc1scQK3Lv6H-sL5kggLaKvxYuanRjEQDVPLzHsr_r31N_IEkgCAK_yxMw68O6aXkJkv0FXA5R0HzNW3H_8Drp2SovAxA8HRUwzajsklaA_aiGUh9fvrQWnUcJecFJxBdWI6OhU9Ha0HFS38igDRvX6sugVO7aCMBzZOM3TuBJ_uvDrHviHTxoHYqAn0i1AQB9H27Wf7awLgKxgEPqpBGjXwV4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6">
+<span class="font-label text-[0.65rem] uppercase tracking-[0.2em] text-secondary bg-on-secondary/80 px-3 py-1 rounded-full backdrop-blur-md">
+                            Identity 01-A
+                        </span>
+</div>
+</div>
+</div>
+<!-- Right: Intro Text (Glassmorphic Card) -->
+<div class="md:col-span-7 flex flex-col justify-center">
+<div class="bg-surface-variant/40 backdrop-blur-2xl p-10 md:p-16 rounded-xl border border-outline-variant/10 neon-glow-purple relative overflow-hidden">
+<!-- Technical Meta Tag -->
+<div class="font-label text-[0.75rem] uppercase tracking-[0.2em] text-primary mb-8 flex items-center gap-3">
+<span class="w-12 h-[1px] bg-primary/40"></span>
+                        Executive Summary
+                    </div>
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-tight">
+                        Crafting digital realms where <span class="italic font-light">form</span> meets <span class="text-secondary">frequency</span>.
+                    </h2>
+<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed max-w-xl">
+<p>
+                            Based in the intersection of code and aesthetics, I specialize in building high-fidelity interfaces that challenge the status quo. My approach is rooted in <span class="text-on-surface font-medium">Cyber-Minimalism</span>—stripping away the noise to leave only the essential neon pulse.
+                        </p>
+<p>
+                            With over a decade of experience in architectural UI design, I treat every pixel as a structural component, ensuring that beauty is never sacrificed for performance.
+                        </p>
+</div>
+<div class="mt-12 flex flex-wrap gap-4">
+<div class="bg-surface-container-highest px-4 py-2 rounded-full border border-outline-variant/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="terminal">terminal</span>
+<span class="font-label text-[0.7rem] uppercase tracking-widest">Full-Stack Architecture</span>
+</div>
+<div class="bg-surface-container-highest px-4 py-2 rounded-full border border-outline-variant/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="blur_on">blur_on</span>
+<span class="font-label text-[0.7rem] uppercase tracking-widest">Generative Art</span>
+</div>
+<div class="bg-surface-container-highest px-4 py-2 rounded-full border border-outline-variant/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="deployed_code">deployed_code</span>
+<span class="font-label text-[0.7rem] uppercase tracking-widest">Web3 Ecosystems</span>
+</div>
+</div>
+</div>
+<!-- Asymmetric Secondary Info -->
+<div class="mt-12 md:pl-16 grid grid-cols-2 gap-8">
+<div>
+<div class="text-3xl font-black text-on-surface tracking-tighter">128+</div>
+<div class="font-label text-[0.65rem] uppercase tracking-widest text-on-surface-variant mt-1">Systems Deployed</div>
+</div>
+<div>
+<div class="text-3xl font-black text-on-surface tracking-tighter">09</div>
+<div class="font-label text-[0.65rem] uppercase tracking-widest text-on-surface-variant mt-1">Industry Awards</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skill Spectrum (Contextual section to fill space) -->
+<section class="mt-48 bg-surface-container-low py-32 overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 relative">
+<div class="flex flex-col md:flex-row justify-between items-end gap-12">
+<div class="max-w-md">
+<h3 class="font-label text-[0.75rem] uppercase tracking-[0.3em] text-secondary-fixed-dim mb-4">Transmission 02</h3>
+<p class="text-2xl font-medium tracking-tight leading-snug">
+                            The visual language is the interface between the user and the infinite data stream.
+                        </p>
+</div>
+<div class="flex-1 flex justify-end gap-2 overflow-hidden opacity-40">
+<div class="w-1 h-32 bg-primary"></div>
+<div class="w-1 h-48 bg-secondary"></div>
+<div class="w-1 h-24 bg-primary-container"></div>
+<div class="w-1 h-56 bg-secondary-fixed"></div>
+<div class="w-1 h-40 bg-primary"></div>
+<div class="w-1 h-64 bg-secondary"></div>
+<div class="w-1 h-32 bg-primary"></div>
+<div class="w-1 h-48 bg-secondary"></div>
+<div class="w-1 h-24 bg-primary-container"></div>
+<div class="w-1 h-56 bg-secondary-fixed"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#1c1b1b]">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.75rem] text-[#e5e2e1]/40">
+                © 2024 ETHEREAL ARCHITECT. CODED IN NEON.
+            </div>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.75rem] text-[#e5e2e1]/40 hover:text-[#ddb7ff] transition-colors hover:translate-y-[-2px] transition-transform" href="#">Twitter</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.75rem] text-[#e5e2e1]/40 hover:text-[#ddb7ff] transition-colors hover:translate-y-[-2px] transition-transform" href="#">GitHub</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.75rem] text-[#e5e2e1]/40 hover:text-[#ddb7ff] transition-colors hover:translate-y-[-2px] transition-transform" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+</body></html>

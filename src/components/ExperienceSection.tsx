@@ -1,108 +1,92 @@
 import { motion } from "framer-motion";
-import AnimatedSection from "./AnimatedSection";
-import SectionHeading from "./SectionHeading";
-import { Briefcase } from "lucide-react";
+import { experienceData } from "@/data/mockData";
+import { Briefcase, MapPin } from "lucide-react";
 
-const experiences = [
-  {
-    company: "Indus Net Technologies",
-    role: "Associate Software Engineer",
-    period: "Sept 2024 – Present",
-    location: "Kolkata",
-    highlights: [
-      "Built a Health Risk Assessment Application to assess and predict future health risks for users.",
-      "Migrated entire database from Firebase (nested format) to MongoDB with normalization for dynamic admin panel use.",
-      "Developed both admin panel (React.js + PrimeReact) and mobile app backend (Node.js + Nest.js).",
-      "Integrated RAG system with OpenAI's GPT-4 for personalized wellness plans.",
-    ],
-    tech: [
-      "React Native",
-      "Nest.js",
-      "React.js",
-      "MongoDB",
-      "Tanstack Query",
-      "OpenAI",
-    ],
-  },
-  {
-    company: "DCG Data Core System",
-    role: "Project Associate",
-    period: "Jan 2024 – Sept 2024",
-    location: "Kolkata",
-    highlights: [
-      "Developed an Ed-Tech platform to bridge the gap between school and college.",
-      "Integrated RESTful APIs to enhance platform functionality.",
-      "Designed responsive UI for enhanced user experience.",
-    ],
-    tech: ["React.js", "Node.js", "REST APIs"],
-  },
-];
+const ExperienceSection = () => {
+  return (
+    <section id="experience" className="py-32 relative overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute top-1/2 left-0 w-72 h-72 bg-secondary/5 rounded-full blur-[100px] pointer-events-none" />
+      
+      <div className="max-w-7xl mx-auto px-8 relative">
+        <div className="mb-20">
+          <motion.span 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            className="font-label text-primary uppercase tracking-[0.2em] text-[0.75rem] mb-4 block"
+          >
+            Professional Journey
+          </motion.span>
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-[3.5rem] md:text-[5rem] font-black font-headline tracking-tighter leading-[0.9] uppercase italic"
+          >
+            Industry <br/> <span className="gradient-text">Experience</span>
+          </motion.h2>
+        </div>
 
-const ExperienceSection = () => (
-  <section id="experience" className="section-padding">
-    <div className="container mx-auto max-w-4xl">
-      <SectionHeading title="Experience" subtitle="My professional journey" />
+        <div className="relative">
+          {/* Vertical Timeline Line */}
+          <div className="absolute left-4 md:left-8 top-0 bottom-0 w-[1px] bg-gradient-to-b from-primary via-secondary to-transparent" />
 
-      <div className="relative">
-        {/* Timeline line */}
-        <div className="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-accent to-transparent" />
-
-        <div className="space-y-12">
-          {experiences.map((exp, i) => (
-            <AnimatedSection key={i} delay={i * 0.15}>
-              <div className="relative pl-12 md:pl-20">
-                {/* Timeline dot */}
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  className="absolute left-2 md:left-6 top-2 w-4 h-4 rounded-full bg-primary pulse-glow"
-                />
-
-                <div className="glass rounded-2xl p-6 md:p-8 hover-glow">
-                  <div className="flex flex-wrap items-start justify-between gap-2 mb-4">
+          <div className="space-y-16">
+            {experienceData.map((exp, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="relative pl-12 md:pl-24"
+              >
+                {/* Neon Timeline Dot */}
+                <div className="absolute left-[13px] md:left-[29px] top-2 w-2.5 h-2.5 rounded-full bg-primary shadow-[0_0_15px_rgba(221,183,255,0.8)] z-10" />
+                
+                <div className="glass p-8 md:p-12 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-500 group neon-glow-secondary">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
                     <div>
-                      <h3 className="text-xl font-display font-bold text-foreground flex items-center gap-2">
-                        <Briefcase size={18} className="text-primary" />
+                      <h3 className="text-2xl font-bold font-headline tracking-tight text-foreground group-hover:text-primary transition-colors">
                         {exp.company}
                       </h3>
-                      <p className="text-primary font-medium">{exp.role}</p>
+                      <div className="flex items-center gap-3 mt-2">
+                        <span className="text-secondary font-label text-xs uppercase tracking-widest font-bold">
+                          {exp.role}
+                        </span>
+                        <span className="w-1 h-1 rounded-full bg-white/20" />
+                        <div className="flex items-center gap-1 text-on-surface-variant/60 text-xs">
+                          <MapPin size={12} />
+                          {exp.location}
+                        </div>
+                      </div>
                     </div>
-                    <span className="text-sm text-muted-foreground bg-secondary/50 px-3 py-1 rounded-full">
+                    <div className="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant/40 bg-white/5 px-4 py-2 rounded-full border border-white/5">
                       {exp.period}
-                    </span>
+                    </div>
                   </div>
 
-                  <ul className="space-y-2 mb-5">
-                    {exp.highlights.map((h, j) => (
-                      <li
-                        key={j}
-                        className="text-muted-foreground text-sm flex gap-2"
-                      >
-                        <span className="text-primary mt-1 shrink-0">▹</span>
-                        {h}
+                  <ul className="space-y-4 max-w-2xl">
+                    {exp.points.map((point, j) => (
+                      <li key={j} className="text-on-surface-variant/80 text-sm leading-relaxed flex gap-3">
+                        <span className="text-primary font-bold mt-1">/</span>
+                        {point}
                       </li>
                     ))}
                   </ul>
 
-                  <div className="flex flex-wrap gap-2">
-                    {exp.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                  {/* Tech Tags from Experience (Optional if wanted) */}
+                  <div className="flex flex-wrap gap-2 mt-8 opacity-40 group-hover:opacity-100 transition-opacity">
+                    {/* You can add specific tech tags here if needed */}
                   </div>
                 </div>
-              </div>
-            </AnimatedSection>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default ExperienceSection;
